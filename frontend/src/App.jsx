@@ -2,10 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import io from "socket.io-client";
 import Editor from "@monaco-editor/react";
-const socket = io(`http://${window.location.hostname}:5000`, {
-  transports: ["websocket"],
-  withCredentials: true
-});
+const socket = io("https://online-code-editor-bxrt.onrender.com");
 const App = () => {
   const [joined, setJoined] = useState(false);
   const [roomId, setRoomId] = useState("");
